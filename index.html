@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Prompt Library</h1>
+        <p class="subtitle">Save, view and delete your prompts locally</p>
+      </header>
+
+      <section class="card form-card">
+        <form id="promptForm">
+          <div class="field-row">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" placeholder="Short, descriptive title" required />
+          </div>
+
+          <div class="field-row">
+            <label for="content">Prompt</label>
+            <textarea id="content" name="content" rows="6" placeholder="Write your prompt here..." required></textarea>
+          </div>
+
+          <div class="actions">
+            <button id="saveBtn" type="submit" class="btn primary">Save Prompt</button>
+            <button id="clearForm" type="button" class="btn ghost">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card list-card">
+        <div class="list-header">
+          <h2>Your Prompts</h2>
+          <button id="clearAll" class="btn danger ghost">Delete All</button>
+        </div>
+        <div id="promptsList" class="prompts-list">
+          <!-- prompt cards injected here -->
+        </div>
+      </section>
+
+      <footer class="footer">Built with localStorage • Open-source</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
